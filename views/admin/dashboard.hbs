@@ -3,21 +3,30 @@
     {{#each massage}}
 
 
-    <div class="post-preview w-50 position-relative">
-        <div class="text-end ">
-            <a href="/api/admin/dashboard/{{id}}" class="btn btn-danger position-absolute top-0 end-0">Delete</a>
-        </div>
+    <div class="post-preview w-75 mx-auto bg-secondary p-3 my-2 rounded">
+
         <a>
             <h1 class="text-start">#{{id}}</h1>
-            <h2 class="post-title"> {{title}}</h2>
-            <h3 class="post-subtitle">{{descr}}</h3>
+            <h2 class="post-title"><span class="text-warning">Title: </span>{{title}}</h2>
+            <h3 class="post-subtitle"> <span class="text-warning">Description: </span>{{descr}}</h3>
         </a>
-        <p class="post-meta">
-            Posted by
+        <p class="post-meta text-white">
+            <span class="text-warning">Created add</span>
             <a>{{user_name}}</a>
             {{ created_at}}
         </p>
+          <p class="post-meta text-white">
+           <span class="text-warning"> Updated add</span>
+            <a>{{user_name}}</a>
+            {{ updated_at}}
+        </p>
 
+        <div class="text-end ">
+            
+            <a href="/api/admin/dashboard/delete/{{id}}" class="btn btn-danger ">Delete</a>
+            <a href="/api/admin/edit/{{id}}" class="btn btn-warning ">Edit</a>
+            <a href="/api/add/home/add/{{id}}" class="btn btn-success  top-0 end-0">Add</a>
+        </div>
 
     </div>
 

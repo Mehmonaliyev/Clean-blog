@@ -1,0 +1,22 @@
+<div class="container mt-5 pt-5">
+    <div class="text end">
+      <a href="/api/home" class="btn btn-primary rounded-2">Go Back</a>
+    </div>
+
+    {{#each massage}}
+    <div class="post-preview w-75 mx-auto">
+        <a>
+            <h1 class="text-end">{{id}}</h1>
+            <h2 class="post-title"> {{title}}</h2>
+            <h3 class="post-subtitle">{{descr}}</h3>
+        </a>
+        <p class="post-meta">
+            Posted by
+            <a>{{user_name}}</a>
+            {{ created_at}}
+        </p>
+    </div>
+
+
+    {{/each}}
+</div>

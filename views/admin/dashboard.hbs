@@ -1,0 +1,26 @@
+<div class="container mt-5 pt-5">
+
+    {{#each massage}}
+
+
+    <div class="post-preview w-50 position-relative">
+        <div class="text-end ">
+            <a href="/api/admin/dashboard/{{id}}" class="btn btn-danger position-absolute top-0 end-0">Delete</a>
+        </div>
+        <a>
+            <h1 class="text-start">#{{id}}</h1>
+            <h2 class="post-title"> {{title}}</h2>
+            <h3 class="post-subtitle">{{descr}}</h3>
+        </a>
+        <p class="post-meta">
+            Posted by
+            <a>{{user_name}}</a>
+            {{ created_at}}
+        </p>
+
+
+    </div>
+
+
+    {{/each}}
+</div>
